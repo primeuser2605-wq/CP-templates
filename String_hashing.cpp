@@ -1,3 +1,20 @@
+ll mod_mul(ll a, ll b, ll m){ return (a % m) * (b % m) % m; }
+ll mod_sub(ll a, ll b, ll m){ a %= m; b %= m; return (a - b + m) % m; }
+
+ll binpow(ll a, ll b, ll m){
+    ll res = 1;
+    while(b){
+        if(b & 1) res = mod_mul(res, a, m);
+        a = mod_mul(a, a, m);
+        b >>= 1;
+    }
+    return res;
+}
+
+ll mminvprime(ll a, ll m){
+    return binpow(a, m - 2, m);
+}
+
 struct Hashing {
     string s;
     int n;
