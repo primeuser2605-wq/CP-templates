@@ -30,3 +30,24 @@ public:
         }
     }
 };
+
+// DSU by height
+vector<int> root, sz;
+
+int par(int x){
+    if(x==root[x]) return x;
+    
+    return root[x]=par(root[x]);
+}
+
+bool join(int a, int b){
+    a=par(a);
+    b=par(b);
+    if(a==b) return false;
+    
+    if(sz[a]>sz[b]) swap(a,b);
+    
+    root[a]=b;
+    sz[b]+=sz[a];
+    return true;
+}
