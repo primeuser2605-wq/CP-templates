@@ -21,3 +21,9 @@ long long binpow(long long a, long long b) {
     return res;
 }
 
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+using namespace std;
+typedef long long ll;
