@@ -55,3 +55,14 @@ int main() {
 #endif
 
 }
+
+#include <bits/stdc++.h>
+#ifndef ONLINE_JUDGE
+#include "debug.h"
+#else
+#define debug(...)
+#endif
+using namespace std;
+#define int long long
+#define sz(x) ((int)(x).size())
+#define all(v) v.begin(), v.end()
