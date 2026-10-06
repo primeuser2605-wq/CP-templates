@@ -1,0 +1,12 @@
+struct Point{
+    int x,y;
+};
+ 
+int cross(Point a,Point b,Point c){
+    return (b.x-a.x)*(c.y-a.y)-(b.y-a.y)*(c.x-a.x);
+}
+ 
+bool onSegment(Point a,Point b,Point p){
+    return min(a.x,b.x)<=p.x&&p.x<=max(a.x,b.x)&&
+           min(a.y,b.y)<=p.y&&p.y<=max(a.y,b.y);
+}
